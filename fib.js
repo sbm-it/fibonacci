@@ -33,7 +33,11 @@ false||(function(){ // wrapping everything within an annonymous function
         }
         fibSeed.size=fibSeed.value.length+5 // adjust size of seed input element
     }
-
-    4
+    fibSeed.onkeyup=fibLength.onkeyup=function(evt){
+        if(evt.keyCode==13){
+            fibButton.click()
+        }
+    }
+    //fibSeed.onblur=fibLength.onblur=function(){fibButton.click()}
 })()
 
