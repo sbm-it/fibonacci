@@ -28,6 +28,9 @@ false||(function(){ // wrapping everything within an annonymous function
         var x = fib(parseInt(fibLength.value),JSON.parse('['+fibSeed.value+']'))
         fibArray.textContent=x.join(', ')
         fibSeed.value=x.slice(-2) // reseed
+        if(x.slice(-1)[0]>100000000000000000000){
+            fibSeed.value='0,1' // if numbers are too big then reset seed
+        }
         fibSeed.size=fibSeed.value.length+5 // adjust size of seed input element
     }
 
