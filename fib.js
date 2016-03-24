@@ -6,7 +6,13 @@ false||(function(){ // wrapping everything within an annonymous function
     h +='Lenght: <input id="fibLength" size=4 value="20"> '
     h +='Seed: <input id="fibSeed" size=5 value="0,1"> '
     h +='<p id="fibArray" style="color:navy"></p>'
-    sbmApps.render(h)
+    if(typeof(sbmApps)=='function'){ // if sbmApps library was loaded
+        sbmApps.render(h)
+    }else{ // if fib.js is being called without any help
+        var dv = document.createElement('div')
+        dv.innerHTML = h
+        document.body.appendChild(dv)
+    }
     // style
     fibSeed.style.color="blue"
     fibSeed.style.border=0
