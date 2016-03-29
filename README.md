@@ -101,7 +101,7 @@ Notice how the graphics are now the same as those of the app store. Although thi
 
 #### 3. Embedded app, https://sbm-it.github.io/apps/#fibonacci.
 
-In this option the app is embedded into the App Store, the fastest and most integrated deployment mechanism. An embedded app has direct access to the same div element (with _id=“appSpace”_) so the browser stack is shared between applications. This deployment model does not you do to anything beyond telling the app store manager about the new manifest. Initially, your app is likely to be treated as a private app, which requires the creation of a js file with the key code as the file name. In this example, that file can be found at https://sbm-it.github.io/apps/app/fibonacci.js:
+In this option the app is embedded into the App Store, the fastest and most integrated deployment mechanism. An embedded app has direct access to the same div element (with _id=“appSpace”_) so **the browser stack is shared between embedded applications**. This deployment model does not you do to anything beyond telling the app store manager about the new manifest. Initially, your app is likely to be treated as a private app, which requires the creation of a js file with the key code as the file name. In this example, that file can be found at https://sbm-it.github.io/apps/app/fibonacci.js:
 
 ```javascript
 $.getJSON("https://sbm-it.github.io/fibonacci/sbmManifest.json")
