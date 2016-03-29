@@ -33,7 +33,7 @@ var fib = function(n,x){	// if length and seed are not provided
 }
 ```
 
-![](pfib.gif =200x)
+![](http://sbm-it.github.io/fibonacci/fib.gif =200x)
 
 Handling the variety of contexts where this code is being called is handled by these 7 lines:
 
@@ -64,7 +64,7 @@ The first example, in [index.html](https://github.com/sbm-it/fibonacci/blob/gh-p
 
 fib.js will not find an sbmApps object in its scope and will therefore assemble a division to host the interactive application.
 
-![](snap1.png =200x)
+![](http://sbm-it.github.io/fibonacci/snap1.png =200x)
 
 
 #### 2. Easy External, http://sbm-it.github.io/fibonacci/easy.html
@@ -81,8 +81,7 @@ This is the easiest way to create an external App, by having the sbmApps client 
 ```
 
 
-![](snap2.png =200x)
+![](http://sbm-it.github.io/fibonacci/snap2.png =200x)
 
-![](snap3.png =200x)
-
+![](http://sbm-it.github.io/fibonacci/snap3.png =200x)
 
