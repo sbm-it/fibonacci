@@ -33,7 +33,7 @@ var fib = function(n,x){	// if length and seed are not provided
 }
 ```
 
-![](http://sbm-it.github.io/fibonacci/fib.gif width=“200”)
+![](http://sbm-it.github.io/fibonacci/fib.gif)
 
 Handling the variety of contexts where this code is being called is handled by these 7 lines:
 
