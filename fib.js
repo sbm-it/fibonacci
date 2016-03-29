@@ -1,6 +1,6 @@
-console.log('fib.js loaded')
+console.log('fib.js loaded');
 
-false||(function(){ // wrapping everything within an annonymous function
+(function(){ // wrapping everything within an annonymous function
     var h = '<h3 style="color:navy">Fibonacci generator</h3>'
     h +='<button id="fibButton" type="button" class="btn btn-primary">Generate</button> '
     h +='Lenght: <input id="fibLength" size=4 value="20"> '
