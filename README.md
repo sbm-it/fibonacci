@@ -80,8 +80,39 @@ This is the easiest way to create an external App, by having the sbmApps client 
 }
 ```
 
+In order to achieve this, as shown in [easy.html](https://github.com/sbm-it/fibonacci/blob/gh-pages/easy.html), all you need to do is to make sure sbmApps.js is loaded, and then point the _**.externalApp**_ method to the manifest:
+
+```html
+<html>
+<head>
+  <script src="https://sbm-it.github.io/apps/sbmApps.js"></script>
+</head>
+<body>
+  <script>
+    sbmApps.externalApp('sbmManifest.json')
+  </script>
+</body>
+</html>
+```
+
+Notice how the graphics are now the same as those of the app store. Although this is an external app, it is undistinguishable from and embedded app. 
 
 ![](http://sbm-it.github.io/fibonacci/snap2.png)
+
+#### 3. Embedded app, https://sbm-it.github.io/apps/#fibonacci.
+
+In this option the app is embedded into the App Store, the fastest and most integrated deployment mechanism. An embedded app has direct access to the same div element (with _id=“appSpace”_) so the browser stack is shared between applications. This deployment model does not you do to anything beyond telling the app store manager about the new manifest. Initially, your app is likely to be treated as a private app, which requires the creation of a js file with the key code as the file name. In this example, that file can be found at https://sbm-it.github.io/apps/app/fibonacci.js:
+
+```javascript
+$.getJSON("https://sbm-it.github.io/fibonacci/sbmManifest.json")
+ .then(function(x){
+     sbmApps.insertApp(x)
+     console.log('inserted fibonacci sbmManifest.json')
+  })
+```
+
+After some tests, if all is good, your manifest will be added to the app store manifest in order to be treated as a public app, with no need for key codes or hash tags in the store URL. The compatibility between these three mechanisms of distribution are also particularly convenient when developing or debugging the app. One could, for example, develop the app entirely as a raw external app (#1) and then enable the other two models. This flexibility is also beneficial to apps that need their own specialized frameworks, such as React or PlotLy, or need to use web components and other asynchronous calls to server side platforms calling data from OAuthed services such as https://developers.google.com/identity/sign-in/web/sign-in.
+
 
 ![](http://sbm-it.github.io/fibonacci/snap3.png)
 
