@@ -14,7 +14,7 @@ Each of these examples uses the same [fib.js](https://github.com/sbm-it/fibonacc
 ___
 Best start view reviewing 12 min videocast 
 
-[![](http://img.youtube.com/vi/ZQS3nlZMDzw/default.jpg)](http://www.youtube.com/watch?v=ZQS3nlZMDzw&vq=hd720) <— click to view in youtube
+[![](http://img.youtube.com/vi/ZQS3nlZMDzw/default.jpg)](http://www.youtube.com/watch?v=ZQS3nlZMDzw&vq=hd720) <— **click to view video in YouTube !**
 
 #### 0. the code
 
