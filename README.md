@@ -16,9 +16,13 @@ Best start view reviewing 12 min videocast
 
 [![](http://img.youtube.com/vi/ZQS3nlZMDzw/default.jpg)](http://www.youtube.com/watch?v=ZQS3nlZMDzw&vq=hd720) <— **click to view video in YouTube !**
 
+#### Design Summary
+
+**All you need is a manifest**. This is the basis of all app stores. Developing the Fibonacci App and associating it with [sbmApps](https://sbm-it.github.io/apps/) is no exception to this design. Here we build on the experience of submitting Apps to app stores like [Chrome](https://chrome.google.com/webstore/developer/dashboard) as well as previous efforts deve stores such as [wApps](https://github.com/wApps/manifest#wapps-all-you-need-is-a-manifest). Those experiences point to the merits of a light weight approach where the developer is **a)** not saddled with the mandatory use of framework, and **b)** gets to maintain the manifest, while providing the store only with the link to it.
+
 #### 0. the code
 
-The code for this app was written only once, in https://github.com/sbm-it/fibonacci/blob/gh-pages/fib.js, and all three examples of development relief on it. At the core of that small script you can find a recursive implementation of a Fibonacci number generator:
+The code for this app was written only once, in https://github.com/sbm-it/fibonacci/blob/gh-pages/fib.js, and all three examples of development relie on it. At the core of that small script you can find a recursive implementation of a Fibonacci number generator:
 
 ```javascript
 var fib = function(n,x){	// if length and seed are not provided
@@ -49,7 +53,7 @@ if(typeof(sbmApps)=='function'){ 	// if sbmApps library is available to help
 
 #### 1. Full external, http://sbm-it.github.io/fibonacci.
 
-The first example, in [index.html](https://github.com/sbm-it/fibonacci/blob/gh-pages/index.html), makes no use of external code or even external frameworks. The integration with the app store is a link to it from the app icon image:
+The first example, in [index.html](https://github.com/sbm-it/fibonacci/blob/gh-pages/index.html), makes no use of external code and does not mandate any external frameworks (you can, as always, use your own). The integration with the app store relies on on communicating the URL to it from the app icon image:
 
 ```html
 <html>
@@ -62,7 +66,7 @@ The first example, in [index.html](https://github.com/sbm-it/fibonacci/blob/gh-p
 </html>
 ```
 
-fib.js will not find an sbmApps object in its scope and will therefore assemble a division to host the interactive application.
+fib.js will therefore not find an sbmApps object in its scope and will therefore assemble a division to host the interactive application. On the other hand, once the icon is clicked, the https://sbm-it.github.io/apps/#fibonacci will instruct the app store to take note of the location of the new manifest. See #3 for the code being this mechanism, where _#fibbonacci_ is used as a pointer to _./app/fibonacci.js_.
 
 ![](http://sbm-it.github.io/fibonacci/snap1.png)
 
